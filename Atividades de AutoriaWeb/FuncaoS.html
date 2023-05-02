@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questao 1</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+body{
+	background-color: #E7E4D5;
+	color: #151101;
+}
+h1{
+	font-size: 40px;
+}
+	</style>
+
+</head>
+
+<body>
+<center>
+	<h1>Função S</h1>
+	<p>Descrição: Ao inserir um número positivo n, o usuário recebe como saída o  <br> resultado da função S = ((1²+1)/(1+3)) + ((2²+1)/(2+3)) + ... + ((n²+1)/(n+3)).</p>
+		<form>
+			<label>Insira um número positivo:</label>
+			<input type="number" id="numero1a">
+			<input type="button" value="Enviar" onclick="leNumero1a()">
+		</form>
+	<br>
+	<h2 id="resultado1a"></h2>
+</center>
+</body>
+
+<script type="text/javascript">
+	function leNumero1a(){
+		var x = parseInt(document.getElementById("numero1a").value);
+		if(x<1|| isNaN(x)){
+			alert("Número inválido. Digite novamente!")
+		}else{
+			funcao(x);
+		}
+	}
+
+	function funcao(x){
+		var resultado1a=0;
+		var resultadotexto = "S = <br>";
+		for(i=1;i<=x;i++){
+			resultado1a += ((i*i)+1)/(i+3);
+			if (i == x){
+				resultadotexto += "(("+i+"²)+1)/("+i+"+3)<br>";
+			}else{
+				resultadotexto += "(("+i+"²)+1)/("+i+"+3) +<br>";
+			}
+		}
+		document.getElementById("resultado1a").innerHTML = resultadotexto + "<br> S = " + resultado1a;
+	}
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questao 3</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+body{
+	background-color: #E7E4D5;
+	color: #151101;
+}
+h1{
+	font-size: 40px;
+}
+	</style>
+
+</head>
+
+<body>
+<center>
+	<h1>Tempo</h1>
+	<p>Descrição: Ao inserir um número positivo de minutos, o usuário recebe como saída o  <br> valor inserido transformado em horas, minutos e segundos.</p>
+		<form>
+			<label>Insira os minutos:</label>
+			<input type="number" id="numero3a">
+			<input type="button" value="Enviar" onclick="leNumero3a()">
+		</form>
+	<br>
+	<h2 id="resultado3a"></h2>
+</center>
+</body>
+
+<script type="text/javascript">
+	function leNumero3a(){
+		var x3a = parseFloat(document.getElementById("numero3a").value);
+		if(x3a<1|| isNaN(x3a)){
+			alert("Número inválido. Digite novamente!")
+		}else{
+			tempo(x3a);
+		}
+	}
+	function tempo(x3a){
+		var resultado3a = "";
+		var horas = parseInt(x3a/60);
+		var minutos = parseInt(x3a - (horas*60));
+		var segundos = (x3a - (horas*60) - minutos)*60;
+		segundos = parseFloat(segundos).toFixed(1);
+		document.getElementById("resultado3a").innerHTML = horas +" horas, " +minutos +" minutos e "+ segundos + " segundos";
+
+	}
+</script>
+</html>

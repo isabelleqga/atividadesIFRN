@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questao 5</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+body{
+	background-color: #E7E4D5;
+	color: #151101;
+}
+h1{
+	font-size: 40px;
+}
+	</style>
+
+</head>
+
+<body>
+<center>
+<h1>Tabuada</h1>
+<p>Descrição: Ao inserir um número positivo n entre 0 e 100, o usuário recebe como saída a  <br> tabuada de 0 a 10 do número em questão.</p>
+		<form>
+			<label>Insira um número inteiro entre 0 e 100:</label><br><br>
+			<input type="number" id="numero1b">
+			<input type="button" value="Enviar" onclick="leNumero1b()">
+		</form>
+	<br>
+	<h2 id="resultado1b"></h2>
+</center>
+</body>
+
+<script type="text/javascript">
+	function leNumero1b(){
+		var x1b = parseInt(document.getElementById("numero1b").value);
+		if(x1b<0 || x1b>100 || isNaN(x1b)){
+			alert("Número inválido. Digite novamente!")
+		}else{
+			tabuada(x1b);
+		}
+
+	}
+
+	function tabuada(x){
+		var resultado1b = "";
+		for(i=0;i<=10;i++){
+			resultado1b += x + " x " + i + " = " + x*i + "<br>";
+		}
+		document.getElementById("resultado1b").innerHTML = resultado1b;
+	}
+</script>
+</html>

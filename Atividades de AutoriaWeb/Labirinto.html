@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		td{
+			width: 60px;
+			height: 60px;
+			text-align:center;
+			border: 2px dotted rgba(4,15,23,0.46);
+			
+		}
+		body{
+			background-color: #cdcfd1;
+
+		}
+		table{
+			background-color: white;
+
+		}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+	</style>
+</head>
+<body>
+
+  <div class="center">
+  <h1>Labirinto</h1>
+  <p>Descrição: Ao iniciar o jogo, o jogador escolhe quantas paredes estarão presentes no labirinto. <br> 
+  	Após isso, o labirinto é disposto e o jogador deve fazer seu caminho do ponto inicial 'o' ao final 'x', <br>
+  	navegando apenas por blocos vizinhos.</p>
+	<table id="jv"> 
+			<tr>
+				<td id="11" style="background-color:pink;" onClick="jogar('11')">o</td>
+				<td id="12" onClick="jogar('12')"></td>
+				<td id="13" onClick="jogar('13')"></td>
+				<td id="14" onClick="jogar('14')"></td>
+				<td id="15" onClick="jogar('15')"></td>
+			</tr>
+			<tr>
+				<td id="21" onClick="jogar('21')"></td>
+				<td id="22" onClick="jogar('22')"></td>
+				<td id="23" onClick="jogar('23')"></td>
+				<td id="24" onClick="jogar('24')"></td>
+				<td id="25" onClick="jogar('25')"></td>
+			</tr>		
+			<tr>
+				<td id="31" onClick="jogar('31')"></td>
+				<td id="32" onClick="jogar('32')"></td>
+				<td id="33" onClick="jogar('33')"></td>
+				<td id="34" onClick="jogar('34')"></td>
+				<td id="35" onClick="jogar('35')"></td>
+			</tr>
+			<tr>
+				<td id="41" onClick="jogar('41')"></td>
+				<td id="42" onClick="jogar('42')"></td>
+				<td id="43" onClick="jogar('43')"></td>
+				<td id="44" onClick="jogar('44')"></td>
+				<td id="45" onClick="jogar('45')"></td>
+			</tr>
+			<tr>
+				<td id="51" onClick="jogar('51')"></td>
+				<td id="52" onClick="jogar('52')"></td>
+				<td id="53" onClick="jogar('53')"></td>
+				<td id="54" onClick="jogar('54')"></td>
+				<td id="55" onClick="jogar('55')"></td>
+			</tr>		
+			<tr>
+				<td id="61" onClick="jogar('61')"></td>
+				<td id="62" onClick="jogar('62')"></td>
+				<td id="63" onClick="jogar('63')"></td>
+				<td id="64" onClick="jogar('64')"></td>
+				<td id="65" onClick="jogar('65')">x</td>
+			</tr>		
+	</table> 
+	<br>
+	<input type="button" value="Novo jogo" onclick="location.reload()">
+	</div>
+	
+
+</body>
+<script type="text/javascript">
+
+var par =  prompt("Quantas parede você quer?");
+for(a=1;a<=par;a++){
+paredes();}
+var localant = 11;
+	function jogar(local) {
+	var locallado = localant+1;
+	var localbaixo = localant+10;
+	var localcima = localant-10;
+	var localolado = localant-1;
+	var localdiagonal1 = localant+1-10;
+	var localdiagonal2 = localant-1-10;
+	var localdiagonal3 = localant+1+10;
+	var localdiagonal4 = localant-1+10;
+
+	if(local!=""+locallado && local!=""+localbaixo && local!=""+localcima && local!=""+localolado && local!=""+localdiagonal1 && local!=""+localdiagonal2 && local!=""+localdiagonal3 && local!=""+localdiagonal4){
+	 	alert("Ande só para quadrados laterais.");
+	}else{
+
+	if(local=="11" || document.getElementById(local).innerHTML == '|||'){
+		alert("Você atingiu uma parede");
+	}else{
+		if(document.getElementById(local).innerHTML == '-'){
+				perdi();
+		}
+		if(document.getElementById(local).innerHTML == 'x'){
+				alert("Você venceu.");
+				document.getElementById(local).style="background-color:pink;";
+				document.getElementById(local).innerHTML = 'x';
+		}else{
+			document.getElementById(local).innerHTML = '-';
+			document.getElementById(local).style="background-color:pink;";
+			localant = parseInt(local);
+		}
+	}
+	
+	}
+	}
+
+	function perdi(){
+		alert("Você perdeu.");
+		for (var i = 1; i <= 6; i++) {
+			for(var j = 1; j<=5;j++) {
+				document.getElementById(""+ i + j).innerHTML = "";
+				
+		}
+		window.close();
+			}
+
+	}
+		function paredes(){
+			do{var i = Math.floor((Math.random() * 6) + 1);
+			var j = Math.floor((Math.random() * 5) + 1);}
+			while((i=='1'&j=="1") || (i=='6'&j=="5"));
+			
+			document.getElementById(i+""+j).innerHTML = '|||';
+  			
+		}
+
+</script>
+</html>

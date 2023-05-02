@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questao 4</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+body{
+	background-color: #E7E4D5;
+	color: #151101;
+}
+h1{
+	font-size: 40px;
+}
+.tg  {
+	border-collapse:collapse;
+	border-spacing:0;
+	display: inline;
+	padding: 50px;
+}
+.tg td{
+	padding:10px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:black;
+	width: 35px;
+	height: 35px;
+}
+	</style>
+
+</head>
+
+<body onload="leNumeros4a()">
+<center>
+	<h1>Caminhos</h1>
+	<h2 id="resultado4a"></h2>
+
+<table class="tg">
+  <tr>
+    <td>2</td>
+    <td>4</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>9</td>
+    <td>12</td>
+  </tr>
+</table>
+
+<table class="tg">
+  <tr>
+    <td>3</td>
+    <td>3</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>12</td>
+    <td>7</td>
+  </tr>
+</table><br><br><br>
+<table class="tg">
+  <tr>
+    <td>2, 3</td>
+    <td>4, 3</td>
+    <td>6, 9</td>
+  </tr>
+  <tr>
+    <td>5, 5</td>
+    <td>9, 12</td>
+    <td>12, 7</td>
+  </tr>
+</table>
+</center>
+</body>
+
+<script type="text/javascript">
+	function leNumeros4a(){
+	var caminhos4a = [];
+	var x4a = [
+	  [2, 4, 6],
+	  [5, 9, 12]
+	];
+	var y4a = [
+	  [3, 3, 9],
+	  [5, 12, 7]
+	];
+		for(i4a=0; i4a<2; i4a++){
+			var caminho4a=0;
+			for(j4a=0; j4a<2; j4a++){
+				var pahpah4a = Math.pow((x4a[i4a][j4a]-x4a[i4a][j4a+1]), 2)
+								+
+							 Math.pow((y4a[i4a][j4a]-y4a[i4a][j4a+1]), 2);
+				caminho4a+= Math.sqrt(pahpah4a);	
+			}
+			caminhos4a[i4a]=parseFloat(caminho4a).toFixed(3);
+		}
+	
+		if(parseFloat(caminhos4a[0])<=parseFloat(caminhos4a[1])){
+			document.getElementById("resultado4a").innerHTML = "O primeiro caminho é menor, com "+caminhos4a[0]+ " u.m. de distância.";
+		}else if(parseFloat(caminhos4a[1])<parseFloat(caminhos4a[0])){
+			document.getElementById("resultado4a").innerHTML = 
+			"O segundo caminho é menor, com "+caminhos4a[1]+ " u.m. de distância.";
+		}
+		
+	}
+
+</script>
+</html>

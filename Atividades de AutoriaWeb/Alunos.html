@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questao 7</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+body{
+	background-color: #E7E4D5;
+	color: #151101;
+}
+h1{
+	font-size: 40px;
+}
+	</style>
+
+</head>
+
+<body>
+<center>
+	<h1>Alunos</h1>
+	<p>Descrição: Ao inserir a matrícula e notas de um aluno, o usuário recebe como saída o  <br> a matrícula, média e situação do aluno. Ao digitar a matrícula '9999' o programa é encerrado e <br> o usuário recebe um panorama que
+	informa a quantidade de alunos que estão em cada situação.</p>
+	<p>Cálculo de média = ((2*nota1)+(3*nota2)+(4*nota3))/9</p>
+		<form>
+			<label>Matricula:</label>
+			<input type="text" id="matricula"><br><br>
+			<label>Nota 1:</label>
+			<input type="number" id="n1"><br><br>
+			<label>Nota 2:</label>
+			<input type="number" id="n2"><br><br>
+			<label>Nota 3:</label>
+			<input type="number" id="n3"><br><br>
+			<input type="button" value="Enviar" onclick="leAluno()">
+			<h4>Para finalizar, digite '9999' na matrícula.</h4>
+		</form>
+	<br>
+	<h2 id="resultado3b"></h2>
+</center>
+</body>
+
+<script type="text/javascript">
+	var resultado3b;
+	var apro = 0;
+	var repro = 0;
+
+	function leAluno(){
+		var matri = document.getElementById("matricula").value;
+		if(matri=="9999"){
+			mostrarFinal();
+		}else{
+			mostrar(matri);
+		}
+		document.getElementById("resultado3b").innerHTML = resultado3b;
+	}
+
+	function mostrarFinal(){
+		resultado3b = "Aprovados: " + apro + "<br> Reprovados: " + repro + "<br> Total de alunos: " + (apro+repro);
+	}
+
+	function mostrar(matri){
+		var n1 = document.getElementById("n1").value;
+		var n2 = document.getElementById("n2").value;
+		var n3 = document.getElementById("n3").value;
+		var media = ((2*n1)+(3*n2)+(4*n3))/9;
+		media = parseFloat(media).toFixed(2);
+		document.getElementById("resultado3b").style.color = "#151101";
+			if(media>=5){
+				resultado3b = "Matricula: "+matri+"<br>"+"Média: "+media+"<br>"+"APROVADO";
+				apro++;
+			}else{
+				resultado3b = "Matricula: "+matri+"<br>"+"Média: "+media+"<br>"+"REPROVADO";
+				repro++;
+			}
+
+	}
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questao 6</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+body{
+	background-color: #E7E4D5;
+	color: #151101;
+}
+h1{
+	font-size: 40px;
+}
+	</style>
+
+</head>
+
+<body>
+<center>
+	<h1>Fatorial</h1>
+	<p>Descrição: Ao inserir um número positivo n entre 0 e 170, o usuário recebe como saída o  <br> fatorial daquele número.</p>
+		<form>
+			<label>Insira um número:</label>
+			<input type="number" id="numero2b">
+			<input type="button" value="Enviar" onclick="leNumero2b()">
+		</form>
+	<br>
+	<h2 id="resultado2b"></h2>
+</center>
+</body>
+
+<script type="text/javascript">
+	function leNumero2b(){
+		var x2b = parseInt(document.getElementById("numero2b").value);
+		if(x2b<0 || isNaN(x2b) || x2b>170){
+			alert("Número inválido. Digite novamente!")
+		}else{
+			calcFator(x2b);
+		}
+
+	}
+
+	function calcFator(x2b){
+		var resultado2b = 1;
+		if(x2b==0){
+			resultado2b = "1";
+		}else{
+			for(i=x2b;i>1;i--){
+				resultado2b *= i; 
+			}
+		}
+		document.getElementById("resultado2b").innerHTML = x2b+"! = "+resultado2b;
+	}
+</script>
+</html>

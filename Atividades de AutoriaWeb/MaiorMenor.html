@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questao 2</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+body{
+	background-color: #E7E4D5;
+	color: #151101;
+}
+h1{
+	font-size: 40px;
+}
+	</style>
+
+</head>
+
+<body onload="leNumeros2a()">
+<center>
+	<h1>Maior e menor</h1>
+	<p>Descrição: Ao inserir 5 números através do prompt, o usuário recebe como saída o  <br> menor e o maior número dentre os inseridos.</p>
+	<h2 id="resultado2a"></h2>
+</center>
+</body>
+
+<script type="text/javascript">
+	function leNumeros2a(){
+		var x2a = [];
+		for(i=0; i<5; i++){
+			x2a[i] = parseInt(prompt("Insira um número:"));
+		}
+		var maior2a = x2a[0];
+		var menor2a = x2a[0];
+		for(j=1; j<50; j++){
+			if(x2a[j]>=maior2a){
+				maior2a = x2a[j];
+			}if(x2a[j]<menor2a){
+				menor2a = x2a[j];			
+			}
+		}
+		document.getElementById("resultado2a").innerHTML = "Maior: "+maior2a+" <br> Menor: " + menor2a;
+	}
+</script>
+</html>

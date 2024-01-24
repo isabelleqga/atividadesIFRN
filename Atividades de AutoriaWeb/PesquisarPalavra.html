@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Questão 8 </title>
+</head>
+<body>
+	<center>
+
+	<div style ="width: 50%;">
+	Palavra pesquisada: <input type="text" id="palavra">
+	<button onclick="pesquisar()">Pesquisar</button>
+	<p id = "aviso"></p>
+
+	<p id = "texto">O Club Atlético de Madrid é um clube de futebol espanhol, sediado na cidade de Madrid, fundado em 26 de abril de 1903. Foi fundado como Athletic Club de Madrid por estudantes bascos simpatizantes do Athletic Bilbao. A equipe da capital espanhola deixaria de ser uma filial em 1921, quando desvencilhou-se da equipe basca. Ainda assim, a similaridade dos uniformes, nomes e distintivos, originada em razão de como o clube madrilenho foi criado, manteve-se,por respeito à antiga parceria.</p>
+	<br>
+
+
+	</div>
+	</center>
+	<hr>
+</body>
+
+<script type="text/javascript">
+	function pesquisar(){
+		var contador = 0;
+		var palavraChave = document.getElementById("palavra").value;
+		var texto = document.getElementById("texto").innerHTML;
+		document.getElementById("texto").innerHTML="";
+		var x = new RegExp(palavraChave, 'ig'); 
+		var textodiv = texto.split(x);
+		var res = "";
+		for (var i = 0; i < textodiv.length; i++) {
+				res += textodiv[i];
+				if(i!=textodiv.length-1){
+				res +=  '<span style="background-color: #FFFF00">'+palavraChave+'</span>';
+			}
+						
+		}
+		if(textodiv.length==1){
+			document.getElementById("aviso").innerHTML="Essa palavra não existe no texto.";
+		}
+
+		document.getElementById("texto").innerHTML=res;
+
+	}
+
+</script>
+</html>

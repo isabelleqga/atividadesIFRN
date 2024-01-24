@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jogo da Forca</title>
+
+	<meta charset="utf-8">
+	<meta name="author" content="Danielly Silva, Isabelle Queiroz">
+      <meta name="description" content="Jogo da Forca Para Iniciante">
+      <meta name="keywords" content="jogo,forca,iniciantes">
+
+	<style type="text/css">
+		body{
+			background-color: #E7E4D5;
+			color: #151101;
+		}
+		p{
+			font-size: 50px;
+			color:black;
+		}
+		#corp{
+			float: right;
+			width: 40%;
+			height: 50%;
+		}
+		#lat{
+			float: left;
+			width: 40%;
+			height: 50%;
+		}
+		label{
+			color:black;
+		}
+		p#resp{
+			font-size: 20px;
+		}
+
+
+	</style>
+</head>
+
+<body>
+<center>
+<h1>Jogo da Forca</h1><br>
+<p id="resultado"></p>
+<div style="display:flex;justify-content:center;">
+
+<div id = "corp">
+
+<img src="06.png" id="corpo" style="width:300px">
+<br><br><br>
+<center><input type="button" value="Começar o jogo" onclick="comecar()"></center>
+<p id="tracos"></p>
+
+
+
+<form>
+	<label>Letra:</label>
+	<input type="text" id="letra">
+	<input type="button" value="Enviar" onclick="enviarLetra()">
+</form>
+<br>
+</div>
+
+</div>
+</center>
+</body>
+
+<script type="text/javascript">
+var palavras = ['atletico','dortmund', 'tottenham', 'rebaixamento', 'fazendeiro', 'impedimento'];
+var clicked = 0;
+var lugares=[];
+var tamanho;
+var quebrada;
+var palavra;
+var acertadas;
+var vidas;
+var letrasescolhidas=[];
+
+	function comecar(){
+		if(clicked==0){
+		document.getElementById("resultado").innerHTML = ""
+		document.getElementById('corpo').src='06.png';
+		acertadas=0;
+		vidas = 5;
+		var posi = Math.floor(Math.random() * palavras.length);
+		palavra = palavras[posi];
+		quebrada = palavra.split("");
+		clicked = 1;
+		tamanho = quebrada.length;
+		var tra="";
+		for(var j=0;j<tamanho;j++){
+			tra+="-";
+		}
+		document.getElementById("tracos").innerHTML = tra;
+		}
+
+	}
+
+	function enviarLetra(){
+		var nao;
+		var igual = 0;
+		var oqta = document.getElementById("tracos").innerHTML;
+		oqtaa = oqta.split("");
+		var printa ="";
+		if(clicked==1){
+			var letraEnvi = document.getElementById("letra").value;
+			letraEnvi = letraEnvi.toLowerCase();
+			letrasescolhidas.push(letraEnvi);
+			for(var q =0;q<letrasescolhidas.lengh;q++){
+				if(letrasescolhidas[q]==letraEnvi){
+					nao = 1;
+				}
+			}
+			if(nao!=1){
+			for(var i = 0; i < tamanho; i++){
+				if(quebrada[i]==letraEnvi){
+					igual=1;
+					acertadas++;
+					printa+=letraEnvi;
+				}else{
+					if(oqtaa[i]=="-"){
+						printa+="-"
+					}else{
+						printa+=oqtaa[i];
+					}
+				}
+			}
+			document.getElementById("tracos").innerHTML = printa;
+
+			if(igual==0){
+				vidas--;
+			}
+			erros();
+		ganhou();
+		}
+	}
+		}
+		
+
+	function ganhou(){
+		if(acertadas==tamanho){
+			document.getElementById("resultado").innerHTML = "Você ganhou."
+			clicked=0;
+		}else if(vidas==0){
+			document.getElementById("resultado").innerHTML = "Chutaram o balde."
+			clicked=0;
+		}
+		
+
+	}
+
+	function erros(){
+		if(vidas==4){
+			document.getElementById('corpo').src='05.png';
+		}else if(vidas==3){
+			document.getElementById('corpo').src='04.png';
+		}else if(vidas==2){
+			document.getElementById('corpo').src='03.png';
+		}else if(vidas==1){
+			document.getElementById('corpo').src='02.png';
+		}else if(vidas==0){
+			document.getElementById('corpo').src='01.png';
+		}
+		ganhou();
+	}
+
+
+</script>
+</html>

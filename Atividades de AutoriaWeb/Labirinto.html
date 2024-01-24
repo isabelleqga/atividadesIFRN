@@ -8,7 +8,7 @@
 			width: 60px;
 			height: 60px;
 			text-align:center;
-			border: 2px dotted rgba(4,15,23,0.46);
+border: 2px dotted rgba(4,15,23,0.46);
 			
 		}
 		body{
@@ -33,12 +33,11 @@
 </head>
 <body>
 
+
+
   <div class="center">
   <h1>Labirinto</h1>
-  <p>Descrição: Ao iniciar o jogo, o jogador escolhe quantas paredes estarão presentes no labirinto. <br> 
-  	Após isso, o labirinto é disposto e o jogador deve fazer seu caminho do ponto inicial 'o' ao final 'x', <br>
-  	navegando apenas por blocos vizinhos.</p>
-	<table id="jv"> 
+<table id="jv"> 
 			<tr>
 				<td id="11" style="background-color:pink;" onClick="jogar('11')">o</td>
 				<td id="12" onClick="jogar('12')"></td>
@@ -81,64 +80,116 @@
 				<td id="64" onClick="jogar('64')"></td>
 				<td id="65" onClick="jogar('65')">x</td>
 			</tr>		
-	</table> 
-	<br>
-	<input type="button" value="Novo jogo" onclick="location.reload()">
-	</div>
+		</table> 
+		</div>
 	
 
 </body>
 <script type="text/javascript">
+gravar();
 
 var par =  prompt("Quantas parede você quer?");
 for(a=1;a<=par;a++){
 paredes();}
 var localant = 11;
 	function jogar(local) {
-	var locallado = localant+1;
-	var localbaixo = localant+10;
-	var localcima = localant-10;
-	var localolado = localant-1;
-	var localdiagonal1 = localant+1-10;
-	var localdiagonal2 = localant-1-10;
-	var localdiagonal3 = localant+1+10;
-	var localdiagonal4 = localant-1+10;
+		var locallado = localant+1;
+		
+		var localbaixo = localant+10;
 
-	if(local!=""+locallado && local!=""+localbaixo && local!=""+localcima && local!=""+localolado && local!=""+localdiagonal1 && local!=""+localdiagonal2 && local!=""+localdiagonal3 && local!=""+localdiagonal4){
-	 	alert("Ande só para quadrados laterais.");
-	}else{
+	 if(local!=""+locallado && local!=""+localbaixo){
+	 	alert("Ande só para quadro ao lado");
+	 }else{
 
 	if(local=="11" || document.getElementById(local).innerHTML == '|||'){
-		alert("Você atingiu uma parede");
+		alert("Aqui n");
 	}else{
+		gravar();
 		if(document.getElementById(local).innerHTML == '-'){
 				perdi();
 		}
 		if(document.getElementById(local).innerHTML == 'x'){
-				alert("Você venceu.");
+				alert("Você venceu. Show.");
 				document.getElementById(local).style="background-color:pink;";
 				document.getElementById(local).innerHTML = 'x';
 		}else{
+
 			document.getElementById(local).innerHTML = '-';
 			document.getElementById(local).style="background-color:pink;";
 			localant = parseInt(local);
+
 		}
 	}
 	
 	}
 	}
 
+
 	function perdi(){
-		alert("Você perdeu.");
+		alert("Você perdeu. Tchau.");
 		for (var i = 1; i <= 6; i++) {
 			for(var j = 1; j<=5;j++) {
 				document.getElementById(""+ i + j).innerHTML = "";
 				
 		}
+		gravar();
 		window.close();
 			}
 
 	}
+	function gravar() {
+			var data = new Date("2021", "12", "12");
+			data = data.toGMTString();			
+			document.cookie = "11=" + document.getElementById("11").innerHTML + "; expires=" + data ;
+			document.cookie = "12=" + document.getElementById("12").innerHTML + "; expires=" + data ;
+			document.cookie = "13=" + document.getElementById("13").innerHTML + "; expires=" + data ;
+			document.cookie = "14=" + document.getElementById("14").innerHTML + "; expires=" + data ;
+			document.cookie = "15=" + document.getElementById("15").innerHTML + "; expires=" + data ;
+			document.cookie = "21=" + document.getElementById("21").innerHTML + "; expires=" + data ;
+			document.cookie = "22=" + document.getElementById("22").innerHTML + "; expires=" + data ;
+			document.cookie = "23=" + document.getElementById("23").innerHTML + "; expires=" + data ;
+			document.cookie = "24=" + document.getElementById("24").innerHTML + "; expires=" + data ;
+			document.cookie = "25=" + document.getElementById("25").innerHTML + "; expires=" + data ;
+			document.cookie = "31=" + document.getElementById("31").innerHTML + "; expires=" + data ;
+			document.cookie = "32=" + document.getElementById("32").innerHTML + "; expires=" + data ;
+			document.cookie = "33=" + document.getElementById("33").innerHTML + "; expires=" + data ;
+			document.cookie = "34=" + document.getElementById("34").innerHTML + "; expires=" + data ;
+			document.cookie = "35=" + document.getElementById("35").innerHTML + "; expires=" + data ;
+			document.cookie = "41=" + document.getElementById("41").innerHTML + "; expires=" + data ;
+			document.cookie = "42=" + document.getElementById("42").innerHTML + "; expires=" + data ;
+			document.cookie = "43=" + document.getElementById("43").innerHTML + "; expires=" + data ;
+			document.cookie = "44=" + document.getElementById("44").innerHTML + "; expires=" + data ;
+			document.cookie = "45=" + document.getElementById("45").innerHTML + "; expires=" + data ;
+			document.cookie = "51=" + document.getElementById("51").innerHTML + "; expires=" + data ;
+			document.cookie = "52=" + document.getElementById("52").innerHTML + "; expires=" + data ;
+			document.cookie = "53=" + document.getElementById("53").innerHTML + "; expires=" + data ;
+			document.cookie = "54=" + document.getElementById("54").innerHTML + "; expires=" + data ;
+			document.cookie = "55=" + document.getElementById("55").innerHTML + "; expires=" + data ;
+			document.cookie = "61=" + document.getElementById("61").innerHTML + "; expires=" + data ;
+			document.cookie = "62=" + document.getElementById("62").innerHTML + "; expires=" + data ;
+			document.cookie = "63=" + document.getElementById("63").innerHTML + "; expires=" + data ;
+			document.cookie = "64=" + document.getElementById("64").innerHTML + "; expires=" + data ;
+			document.cookie = "65=" + document.getElementById("65").innerHTML + "; expires=" + data ;
+		}
+
+		function carregar() {
+		for (var i = 1; i <= 6; i++) {
+			for(var j = 1; j<=5;j++) {
+					var chave = i + "" + j;
+					var cookies = document.cookie;
+					if (cookies.indexOf(chave) == -1) {
+						alert("Nao eh possivel carregar!!!");
+						return;
+					}
+					cookies = cookies.substr(cookies.indexOf((chave+"=")), cookies.length); 
+					if (cookies.indexOf(";") != -1) {
+						cookies = cookies.substr(0, cookies.indexOf(";"));
+					}
+					var resposta = cookies.split('=')[1];
+					document.getElementById(chave).innerHTML = resposta;
+				}
+			}
+		}
 		function paredes(){
 			do{var i = Math.floor((Math.random() * 6) + 1);
 			var j = Math.floor((Math.random() * 5) + 1);}

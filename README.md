@@ -1,7 +1,16 @@
-# atividadesIFRN
+<div align="center">
+  <img src="https://portal.ifrn.edu.br/media/images/10722_O_Diretor_do_IFRN_Campus_Caico_convida_a.width-500.jpg" alt="logo_ifrn" width="250" height="auto" style="border-radius:20px;" />
+  <h2>
+    Campos Caicó — 2017-2021
+  </h2>
+  <h1>
+    Atividades IFRN
+  </h1> 
+</div>
+
 Atividades realizados em diversas matérias durante o curso de Informática no IFRN-Campus Caicó (2017-2021)
 
-## /Atividades de Algoritmos e Lógica de Programação (2017)
+## /Algoritmos e Lógica de Programação (2017)
 
 - Disciplina ofertada pelo professor Romerito Campos;
 
@@ -9,7 +18,7 @@ Atividades realizados em diversas matérias durante o curso de Informática no I
 
 - Exercícios agrupados em 3 arquivos por assunto: `1 Introdução.py`, `2 Funções.py` e `3 Repetição.py`, cada um com vários exercícios separados por comentário.
 
-## /Atividades de Programação Estruturada e Orientada a Objetos (2018)
+## /Programação Estruturada e Orientada a Objetos (2018)
 
 - Disciplina ofertada pelo professor Max Miller;
 
@@ -17,7 +26,7 @@ Atividades realizados em diversas matérias durante o curso de Informática no I
 
 - Classes soltas mais uma série de projetos NetBeans zipados, numerados em ordem cronológica (`01 - Diagnostico...zip` até `12 - Cadastro de Aluno.zip`).
 
-## /Atividades de Autoria Web (2019)
+## /Autoria Web (2019)
 
 - Disciplina ofertada pelo professor Daniel Enos;
 
@@ -25,15 +34,15 @@ Atividades realizados em diversas matérias durante o curso de Informática no I
 
 - `Exercicios.html` reúne os exercícios sequenciais numa única página; `Jogo da Forca/` é um projeto à parte, com sua própria pasta e imagens.
 
-## /Atividades de Banco de Dados (2019)
+## /Banco de Dados (2019)
 
 - Disciplina ofertada pelo professor Ari Oliveira;
 
 - Foco em MySQL e PHP;
 
-- Projetos, cada um dividido em `includes/`, `pages/` e (quando aplicável) `img/`/`data/`/`db/`: `AgendaFC` (sistema de criação de agendas e registro de eventos), `Pizzaria` (sistema de registro de pedidos e produtos de uma pizzaria), `AltMarket` (sistema de market) e `Placar Ao Vivo` (placar ao vivo para partidas).
+- Projetos, cada um dividido em `includes/`, `pages/` e (quando aplicável) `img/`/`data/`/`db/`: `agendafc` (sistema de criação de agendas e registro de eventos), `pizzaria` (sistema de registro de pedidos e produtos de uma pizzaria), `AltMarket` (sistema de market) e `Placar Ao Vivo` (placar ao vivo para partidas).
 
-## /Atividades de Projeto de Desenvolvimento de Software (2020-2021)
+## /Projeto de Desenvolvimento de Software (2020-2021)
 
 - Disciplina ofertada pelo professor Ari Oliveira;
 
@@ -41,4 +50,4 @@ Atividades realizados em diversas matérias durante o curso de Informática no I
 
 ---
 
-Também há um arquivo solto `Projeto Doceem.zip` na raiz do repositório, ainda não integrado a nenhuma pasta de disciplina.
+Há também um `Projeto Doceem.zip` solto dentro de `Programação Estruturada e Orientada a Objetos/`, ainda não integrado à listagem de projetos numerados da disciplina.

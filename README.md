@@ -8,7 +8,7 @@
   </h1> 
 </div>
 
-Atividades realizados em diversas matérias durante o curso de Informática no IFRN-Campus Caicó (2017-2021)
+Atividades realizadas em diversas matérias durante o curso de Informática no IFRN-Campus Caicó (2017-2021)
 
 ## /Algoritmos e Lógica de Programação (2017)
 
@@ -32,7 +32,7 @@ Atividades realizados em diversas matérias durante o curso de Informática no I
 
 - Foco em HTML, CSS e Javascript sem uso de bibliotecas ou frameworks;
 
-- `Exercicios.html` reúne os exercícios sequenciais numa única página; `Jogo da Forca/` é um projeto à parte, com sua própria pasta e imagens.
+- `Exercicios.html` reúne os exercícios sequenciais numa única página; `Jogo da Forca/` e `Bingo/` são projetos à parte, cada um com sua própria pasta e imagens.
 
 ## /Banco de Dados (2019)
 
@@ -50,4 +50,4 @@ Atividades realizados em diversas matérias durante o curso de Informática no I
 
 ---
 
-Há também um projeto NetBeans à parte dentro de `Programação Estruturada e Orientada a Objetos/`, `Projeto Doce de Neem/` (antes um `Projeto Doceem.zip` solto), ainda não integrado à listagem numerada da disciplina.
+Há também um projeto NetBeans à parte dentro de `Programação Estruturada e Orientada a Objetos/`: `Projeto Doce de Neem/` (antes um `Projeto Doceem.zip` solto), ainda não integrado à listagem numerada da disciplina.

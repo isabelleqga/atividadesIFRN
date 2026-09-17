@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Jogo da Forca</title>
+
+    <meta charset="utf-8" />
+    <meta name="author" content="Danielly Silva, Isabelle Queiroz" />
+    <meta name="description" content="Jogo da Forca Para Iniciante" />
+    <meta name="keywords" content="jogo,forca,iniciantes" />
+
+    <style type="text/css">
+      body {
+        background-color: #e7e4d5;
+        color: #151101;
+      }
+      p {
+        font-size: 50px;
+        color: black;
+      }
+      #corp {
+        float: right;
+        width: 40%;
+        height: 50%;
+      }
+      #lat {
+        float: left;
+        width: 40%;
+        height: 50%;
+      }
+      label {
+        color: black;
+      }
+      p#resp {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <center>
+      <h1>Jogo da Forca</h1>
+      <br />
+      <p id="resultado"></p>
+      <div style="display: flex; justify-content: center">
+        <div id="corp">
+          <img src="06.png" id="corpo" style="width: 300px" />
+          <br /><br /><br />
+          <center>
+            <input type="button" value="Começar o jogo" onclick="comecar()" />
+          </center>
+          <p id="tracos"></p>
+
+          <form>
+            <label>Letra:</label>
+            <input type="text" id="letra" />
+            <input type="button" value="Enviar" onclick="enviarLetra()" />
+          </form>
+          <br />
+        </div>
+      </div>
+    </center>
+  </body>
+
+  <script type="text/javascript">
+    // Estado do jogo
+    var palavras = [
+      "atletico",
+      "dortmund",
+      "tottenham",
+      "rebaixamento",
+      "fazendeiro",
+      "impedimento",
+    ];
+    var jogoComecado = 0;
+    var palavra;
+    var palavraLetras = [];
+    var tamanho;
+    var acertadas;
+    var vidas;
+    var letrasEscolhidas = [];
+
+    // Sorteia uma palavra nova e reinicia o estado do jogo
+    function comecar() {
+      if (jogoComecado == 0) {
+        document.getElementById("resultado").innerHTML = "";
+        document.getElementById("corpo").src = "06.png";
+        acertadas = 0;
+        vidas = 5;
+        letrasEscolhidas = [];
+        var posi = Math.floor(Math.random() * palavras.length);
+        palavra = palavras[posi];
+        palavraLetras = palavra.split("");
+        jogoComecado = 1;
+        tamanho = palavraLetras.length;
+
+        var tracosIniciais = "";
+        for (var j = 0; j < tamanho; j++) {
+          tracosIniciais += "-";
+        }
+        document.getElementById("tracos").innerHTML = tracosIniciais;
+      }
+    }
+
+    // Processa a letra digitada: ignora repetidas, atualiza os traços e a vida
+    function enviarLetra() {
+      if (jogoComecado != 1) {
+        return;
+      }
+
+      var tracosAtuais = document.getElementById("tracos").innerHTML.split("");
+      var letraEnvi = document.getElementById("letra").value.toLowerCase();
+
+      var jaEscolhida = false;
+      for (var q = 0; q < letrasEscolhidas.length; q++) {
+        if (letrasEscolhidas[q] == letraEnvi) {
+          jaEscolhida = true;
+        }
+      }
+      if (jaEscolhida) {
+        return;
+      }
+      letrasEscolhidas.push(letraEnvi);
+
+      var acertouLetra = false;
+      var novosTracos = "";
+      for (var i = 0; i < tamanho; i++) {
+        if (palavraLetras[i] == letraEnvi) {
+          acertouLetra = true;
+          acertadas++;
+          novosTracos += letraEnvi;
+        } else {
+          novosTracos += tracosAtuais[i];
+        }
+      }
+      document.getElementById("tracos").innerHTML = novosTracos;
+
+      if (!acertouLetra) {
+        vidas--;
+      }
+      atualizarForca();
+      verificarFimDeJogo();
+    }
+
+    // Mostra o desenho da forca correspondente à quantidade de vidas restantes
+    function atualizarForca() {
+      if (vidas == 4) {
+        document.getElementById("corpo").src = "05.png";
+      } else if (vidas == 3) {
+        document.getElementById("corpo").src = "04.png";
+      } else if (vidas == 2) {
+        document.getElementById("corpo").src = "03.png";
+      } else if (vidas == 1) {
+        document.getElementById("corpo").src = "02.png";
+      } else if (vidas == 0) {
+        document.getElementById("corpo").src = "01.png";
+      }
+    }
+
+    // Verifica se o jogador ganhou (acertou a palavra) ou perdeu (ficou sem vidas)
+    function verificarFimDeJogo() {
+      if (acertadas == tamanho) {
+        document.getElementById("resultado").innerHTML = "Você ganhou.";
+        jogoComecado = 0;
+      } else if (vidas == 0) {
+        document.getElementById("resultado").innerHTML = "Chutaram o balde.";
+        jogoComecado = 0;
+      }
+    }
+  </script>
+</html>

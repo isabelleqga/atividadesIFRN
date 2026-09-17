@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercícios de Autoria Web</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+body{
+	background-color: #E7E4D5;
+	color: #151101;
+}
+h1{
+	font-size: 40px;
+}
+.tg  {
+	border-collapse:collapse;
+	border-spacing:0;
+	display: inline;
+	padding: 50px;
+}
+.tg td{
+	padding:10px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:black;
+	width: 35px;
+	height: 35px;
+}
+hr{
+	width: 80%;
+	margin: 60px auto;
+}
+	</style>
+
+</head>
+
+<body>
+
+<!-- Questao 1 - Função S -->
+<center>
+	<h1>Função S</h1>
+	<p>Descrição: Ao inserir um número positivo n, o usuário recebe como saída o  <br> resultado da função S = ((1²+1)/(1+3)) + ((2²+1)/(2+3)) + ... + ((n²+1)/(n+3)).</p>
+		<form>
+			<label>Insira um número positivo:</label>
+			<input type="number" id="numero1a">
+			<input type="button" value="Enviar" onclick="leNumero1a()">
+		</form>
+	<br>
+	<h2 id="resultado1a"></h2>
+</center>
+<hr>
+
+<!-- Questao 2 - Maior e menor (usa prompt: botão chama a função em vez de rodar ao carregar a página) -->
+<center>
+	<h1>Maior e menor</h1>
+	<p>Descrição: Ao inserir 5 números através do prompt, o usuário recebe como saída o  <br> menor e o maior número dentre os inseridos.</p>
+	<input type="button" value="Inserir números" onclick="leNumeros2a()">
+	<br><br>
+	<h2 id="resultado2a"></h2>
+</center>
+<hr>
+
+<!-- Questao 3 - Tempo -->
+<center>
+	<h1>Tempo</h1>
+	<p>Descrição: Ao inserir um número positivo de minutos, o usuário recebe como saída o  <br> valor inserido transformado em horas, minutos e segundos.</p>
+		<form>
+			<label>Insira os minutos:</label>
+			<input type="number" id="numero3a">
+			<input type="button" value="Enviar" onclick="leNumero3a()">
+		</form>
+	<br>
+	<h2 id="resultado3a"></h2>
+</center>
+<hr>
+
+<!-- Questao 4 - Caminhos (não usa prompt, mantém o cálculo automático ao carregar a página) -->
+<center>
+	<h1>Caminhos</h1>
+	<p>Descrição: Dados dois caminhos, cada um definido por 3 pontos (x, y), o programa calcula a <br> distância total percorrida em cada caminho e informa qual dos dois é o mais curto.</p>
+	<h2 id="resultado4a"></h2>
+
+<table class="tg">
+  <tr>
+    <td>2</td>
+    <td>4</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>9</td>
+    <td>12</td>
+  </tr>
+</table>
+
+<table class="tg">
+  <tr>
+    <td>3</td>
+    <td>3</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>12</td>
+    <td>7</td>
+  </tr>
+</table><br><br><br>
+<table class="tg">
+  <tr>
+    <td>2, 3</td>
+    <td>4, 3</td>
+    <td>6, 9</td>
+  </tr>
+  <tr>
+    <td>5, 5</td>
+    <td>9, 12</td>
+    <td>12, 7</td>
+  </tr>
+</table>
+</center>
+<hr>
+
+<!-- Questao 5 - Tabuada -->
+<center>
+<h1>Tabuada</h1>
+<p>Descrição: Ao inserir um número positivo n entre 0 e 100, o usuário recebe como saída a  <br> tabuada de 0 a 10 do número em questão.</p>
+		<form>
+			<label>Insira um número inteiro entre 0 e 100:</label><br><br>
+			<input type="number" id="numero1b">
+			<input type="button" value="Enviar" onclick="leNumero1b()">
+		</form>
+	<br>
+	<h2 id="resultado1b"></h2>
+</center>
+<hr>
+
+<!-- Questao 6 - Fatorial -->
+<center>
+	<h1>Fatorial</h1>
+	<p>Descrição: Ao inserir um número positivo n entre 0 e 170, o usuário recebe como saída o  <br> fatorial daquele número.</p>
+		<form>
+			<label>Insira um número:</label>
+			<input type="number" id="numero2b">
+			<input type="button" value="Enviar" onclick="leNumero2b()">
+		</form>
+	<br>
+	<h2 id="resultado2b"></h2>
+</center>
+<hr>
+
+<!-- Questao 7 - Alunos -->
+<center>
+	<h1>Alunos</h1>
+	<p>Descrição: Ao inserir a matrícula e notas de um aluno, o usuário recebe como saída o  <br> a matrícula, média e situação do aluno. Ao digitar a matrícula '9999' o programa é encerrado e <br> o usuário recebe um panorama que
+	informa a quantidade de alunos que estão em cada situação.</p>
+	<p>Cálculo de média = ((2*nota1)+(3*nota2)+(4*nota3))/9</p>
+		<form>
+			<label>Matricula:</label>
+			<input type="text" id="matricula"><br><br>
+			<label>Nota 1:</label>
+			<input type="number" id="n1"><br><br>
+			<label>Nota 2:</label>
+			<input type="number" id="n2"><br><br>
+			<label>Nota 3:</label>
+			<input type="number" id="n3"><br><br>
+			<input type="button" value="Enviar" onclick="leAluno()">
+			<h4>Para finalizar, digite '9999' na matrícula.</h4>
+		</form>
+	<br>
+	<h2 id="resultado3b"></h2>
+</center>
+<hr>
+
+<!-- Questao 8 - Pesquisar Palavra -->
+<center>
+	<h1>Pesquisar Palavra</h1>
+	<div style ="width: 50%;">
+	Palavra pesquisada: <input type="text" id="palavra">
+	<button onclick="pesquisar()">Pesquisar</button>
+	<p id = "aviso"></p>
+
+	<p id = "texto">O Club Atlético de Madrid é um clube de futebol espanhol, sediado na cidade de Madrid, fundado em 26 de abril de 1903. Foi fundado como Athletic Club de Madrid por estudantes bascos simpatizantes do Athletic Bilbao. A equipe da capital espanhola deixaria de ser uma filial em 1921, quando desvencilhou-se da equipe basca. Ainda assim, a similaridade dos uniformes, nomes e distintivos, originada em razão de como o clube madrilenho foi criado, manteve-se,por respeito à antiga parceria.</p>
+	<br>
+	</div>
+</center>
+
+</body>
+
+<script type="text/javascript">
+	// Questao 1 - Função S
+	function leNumero1a(){
+		var x = parseInt(document.getElementById("numero1a").value);
+		if(x<1|| isNaN(x)){
+			alert("Número inválido. Digite novamente!")
+		}else{
+			funcao(x);
+		}
+	}
+
+	function funcao(x){
+		var resultado1a=0;
+		var resultadotexto = "S = <br>";
+		for(i=1;i<=x;i++){
+			resultado1a += ((i*i)+1)/(i+3);
+			if (i == x){
+				resultadotexto += "(("+i+"²)+1)/("+i+"+3)<br>";
+			}else{
+				resultadotexto += "(("+i+"²)+1)/("+i+"+3) +<br>";
+			}
+		}
+		document.getElementById("resultado1a").innerHTML = resultadotexto + "<br> S = " + resultado1a;
+	}
+
+	// Questao 2 - Maior e menor
+	function leNumeros2a(){
+		var x2a = [];
+		for(i=0; i<5; i++){
+			x2a[i] = parseInt(prompt("Insira um número:"));
+		}
+		var maior2a = x2a[0];
+		var menor2a = x2a[0];
+		for(j=1; j<50; j++){
+			if(x2a[j]>=maior2a){
+				maior2a = x2a[j];
+			}if(x2a[j]<menor2a){
+				menor2a = x2a[j];
+			}
+		}
+		document.getElementById("resultado2a").innerHTML = "Maior: "+maior2a+" <br> Menor: " + menor2a;
+	}
+
+	// Questao 3 - Tempo
+	function leNumero3a(){
+		var x3a = parseFloat(document.getElementById("numero3a").value);
+		if(x3a<1|| isNaN(x3a)){
+			alert("Número inválido. Digite novamente!")
+		}else{
+			tempo(x3a);
+		}
+	}
+	function tempo(x3a){
+		var resultado3a = "";
+		var horas = parseInt(x3a/60);
+		var minutos = parseInt(x3a - (horas*60));
+		var segundos = (x3a - (horas*60) - minutos)*60;
+		segundos = parseFloat(segundos).toFixed(1);
+		document.getElementById("resultado3a").innerHTML = horas +" horas, " +minutos +" minutos e "+ segundos + " segundos";
+
+	}
+
+	// Questao 4 - Caminhos (chamada diretamente aqui embaixo, no lugar do antigo body onload)
+	function leNumeros4a(){
+	var caminhos4a = [];
+	var x4a = [
+	  [2, 4, 6],
+	  [5, 9, 12]
+	];
+	var y4a = [
+	  [3, 3, 9],
+	  [5, 12, 7]
+	];
+		for(i4a=0; i4a<2; i4a++){
+			var caminho4a=0;
+			for(j4a=0; j4a<2; j4a++){
+				var pahpah4a = Math.pow((x4a[i4a][j4a]-x4a[i4a][j4a+1]), 2)
+								+
+							 Math.pow((y4a[i4a][j4a]-y4a[i4a][j4a+1]), 2);
+				caminho4a+= Math.sqrt(pahpah4a);
+			}
+			caminhos4a[i4a]=parseFloat(caminho4a).toFixed(3);
+		}
+
+		if(parseFloat(caminhos4a[0])<=parseFloat(caminhos4a[1])){
+			document.getElementById("resultado4a").innerHTML = "O primeiro caminho é menor, com "+caminhos4a[0]+ " u.m. de distância.";
+		}else if(parseFloat(caminhos4a[1])<parseFloat(caminhos4a[0])){
+			document.getElementById("resultado4a").innerHTML =
+			"O segundo caminho é menor, com "+caminhos4a[1]+ " u.m. de distância.";
+		}
+
+	}
+	leNumeros4a();
+
+	// Questao 5 - Tabuada
+	function leNumero1b(){
+		var x1b = parseInt(document.getElementById("numero1b").value);
+		if(x1b<0 || x1b>100 || isNaN(x1b)){
+			alert("Número inválido. Digite novamente!")
+		}else{
+			tabuada(x1b);
+		}
+
+	}
+
+	function tabuada(x){
+		var resultado1b = "";
+		for(i=0;i<=10;i++){
+			resultado1b += x + " x " + i + " = " + x*i + "<br>";
+		}
+		document.getElementById("resultado1b").innerHTML = resultado1b;
+	}
+
+	// Questao 6 - Fatorial
+	function leNumero2b(){
+		var x2b = parseInt(document.getElementById("numero2b").value);
+		if(x2b<0 || isNaN(x2b) || x2b>170){
+			alert("Número inválido. Digite novamente!")
+		}else{
+			calcFator(x2b);
+		}
+
+	}
+
+	function calcFator(x2b){
+		var resultado2b = 1;
+		if(x2b==0){
+			resultado2b = "1";
+		}else{
+			for(i=x2b;i>1;i--){
+				resultado2b *= i;
+			}
+		}
+		document.getElementById("resultado2b").innerHTML = x2b+"! = "+resultado2b;
+	}
+
+	// Questao 7 - Alunos
+	var resultado3b;
+	var apro = 0;
+	var repro = 0;
+
+	function leAluno(){
+		var matri = document.getElementById("matricula").value;
+		if(matri=="9999"){
+			mostrarFinal();
+		}else{
+			mostrar(matri);
+		}
+		document.getElementById("resultado3b").innerHTML = resultado3b;
+	}
+
+	function mostrarFinal(){
+		resultado3b = "Aprovados: " + apro + "<br> Reprovados: " + repro + "<br> Total de alunos: " + (apro+repro);
+	}
+
+	function mostrar(matri){
+		var n1 = document.getElementById("n1").value;
+		var n2 = document.getElementById("n2").value;
+		var n3 = document.getElementById("n3").value;
+		var media = ((2*n1)+(3*n2)+(4*n3))/9;
+		media = parseFloat(media).toFixed(2);
+		document.getElementById("resultado3b").style.color = "#151101";
+			if(media>=5){
+				resultado3b = "Matricula: "+matri+"<br>"+"Média: "+media+"<br>"+"APROVADO";
+				apro++;
+			}else{
+				resultado3b = "Matricula: "+matri+"<br>"+"Média: "+media+"<br>"+"REPROVADO";
+				repro++;
+			}
+
+	}
+
+	// Questao 8 - Pesquisar Palavra
+	function pesquisar(){
+		var contador = 0;
+		var palavraChave = document.getElementById("palavra").value;
+		var texto = document.getElementById("texto").innerHTML;
+		document.getElementById("texto").innerHTML="";
+		var x = new RegExp(palavraChave, 'ig');
+		var textodiv = texto.split(x);
+		var res = "";
+		for (var i = 0; i < textodiv.length; i++) {
+				res += textodiv[i];
+				if(i!=textodiv.length-1){
+				res +=  '<span style="background-color: #FFFF00">'+palavraChave+'</span>';
+			}
+
+		}
+		if(textodiv.length==1){
+			document.getElementById("aviso").innerHTML="Essa palavra não existe no texto.";
+		}
+
+		document.getElementById("texto").innerHTML=res;
+
+	}
+</script>
+</html>

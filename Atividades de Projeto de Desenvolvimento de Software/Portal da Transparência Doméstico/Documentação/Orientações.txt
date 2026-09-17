@@ -1,0 +1,51 @@
+Cores:
+#FFFFFF = branco
+#144E8C = azul escuro
+#eff6f5 = verde claro (bg)
+#222222 = preto
+#c7d4e2 = cinza?
+
+Fonte:
+Montserrat
+
+
+Notas:
+•Mexer na página do css do layout era muito complicado,
+então para alterar o estilo dos inputs e botões eu usei o style=""
+•Em algumas páginas vocês vão ser algo como "col-md-6", esse é o tamanho do elemento
+Um 'row' cabe um elemento de 12. Se você for pôr vários no mesmo rol, tem que dividir.
+Ex: col md 6 cl md 6 ou col md 3 col md 3 col md 6
+Tem exemplos práticas em páginas de editar/criar que eu já fiz!
+•A parte de adicionar coisas nas páginas de estatísticas realmente é complicado.
+Não sei explicar direito, pq quando eu mexia era tentativa e erro.
+Provavelmente teramos que fazer alterações no modelo para que seja viável no código. Boa sorte!
+•Na documentação do layout tem exemplos e informações sobre os gráficos!
+•Para adicionar imagens você deve colocar na pasta /assets/img e linkar direitinho
+•Os arquivos de código estão todos na mesma pasta pra facilitar minha vida, e se forem
+organizar igual Lukinhas fez com as iamgens, vai ter que mudar mts referências nos botões e links -> Lembrem!
+
+•Qualquer coisa podem me perguntar que se eu conseguir, ajudo na hora ;)
+
+•Segue os códigos:
+
+Input:
+
+<input class="form-control border-input" 
+style="background-color: transparent; border-radius: 0px; 
+border-color: #c7d4e2; border-width: 3px">
+
+- Se lembre de botar o value="" ou placeholder=""
+- Tem muitos exemplos nas páginas que eu já fiz
+
+Botão/link:
+
+<a href="[pagina para onde vai].php" 
+class="btn btn-info btn-fill btn-wd" 
+style="color:#144E8C; background-color: transparent; 
+border-radius: 0px; border-color: #144E8C; 
+border-width: 3px; height: 40px">
+<label style="color: #144E8C">
+<b> [texto] </b>
+</label>
+</a> 
+

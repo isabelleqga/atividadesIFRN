@@ -50,4 +50,4 @@ Atividades realizados em diversas matérias durante o curso de Informática no I
 
 ---
 
-Há também um `Projeto Doceem.zip` solto dentro de `Programação Estruturada e Orientada a Objetos/`, ainda não integrado à listagem de projetos numerados da disciplina.
+Há também um projeto NetBeans à parte dentro de `Programação Estruturada e Orientada a Objetos/`, `Projeto Doce de Neem/` (antes um `Projeto Doceem.zip` solto), ainda não integrado à listagem numerada da disciplina.

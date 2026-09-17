@@ -40,7 +40,7 @@ Atividades realizados em diversas matérias durante o curso de Informática no I
 
 - Foco em MySQL e PHP;
 
-- Projetos, cada um dividido em `includes/`, `pages/` e (quando aplicável) `img/`/`data/`/`db/`: `agendafc` (sistema de criação de agendas e registro de eventos), `pizzaria` (sistema de registro de pedidos e produtos de uma pizzaria), `AltMarket` (sistema de market) e `Placar Ao Vivo` (placar ao vivo para partidas).
+- Projetos, cada um dividido em `includes/`, `pages/` e (quando aplicável) `img/`/`data/`/`db/`: `Agenda FC` (sistema de criação de agendas e registro de eventos), `Pizzaria ARI` (sistema de registro de pedidos e produtos de uma pizzaria), `AltMarket` (sistema de market) e `Placar Ao Vivo` (placar ao vivo para partidas).
 
 ## /Projeto de Desenvolvimento de Software (2020-2021)
 

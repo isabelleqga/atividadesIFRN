@@ -26,7 +26,7 @@ Atividades realizadas em diversas matérias durante o curso de Informática no I
 
 - Classes soltas mais uma série de projetos NetBeans zipados, numerados em ordem cronológica (`01 - Diagnostico...zip` até `12 - Cadastro de Aluno.zip`);
 
-- `Projeto Doce de Neem/` é um projeto NetBeans à parte (antes um `Projeto Doceem.zip` solto), ainda não integrado à numeração acima.
+- `Projeto Doce de Neem/` é um projeto NetBeans à parte.
 
 ## /Autoria Web (2019)
 

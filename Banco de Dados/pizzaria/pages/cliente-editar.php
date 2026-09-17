@@ -14,7 +14,6 @@ if(isset($_POST['nome'])){
 	header("Location: clientes.php");
 }
 
-$consultaBairros = $MySQLi->query("SELECT * FROM TB_BAIRROS");
 $codigo = $_GET['codigo'];
 if(!isset($_GET['codigo'])) header("location: clientes.php");
 $consultaCliente = $MySQLi->query("SELECT * FROM TB_CLIENTES WHERE CLI_CODIGO = $codigo");

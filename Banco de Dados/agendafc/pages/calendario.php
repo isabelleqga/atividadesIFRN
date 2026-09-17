@@ -65,11 +65,9 @@ for ( $day = 1; $day <= $day_count; $day++, $diasemana++) {
             //dias do intervalo
             $timestampinicio = strtotime( $datainicioevento ); //inicio
             $timestampfim = strtotime( $datafimevento ); //fim
-            $cont = 1;
                 while ( $timestampinicio <= $timestampfim ){
 	               $databruta=date( 'Y-m-j', $timestampinicio ) . PHP_EOL;
 	               $timestampinicio += 86400;
-	               $cont++;
 	               $dataiterada=date('Y-m-j', strtotime($databruta));
 	               if($dates==$dataiterada){
 		              array_push($dias,$dataiterada);

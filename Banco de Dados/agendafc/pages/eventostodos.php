@@ -6,7 +6,6 @@ $codigousuario = $_SESSION['codigousuario'];
 
 if(isset($_GET['excluir'])) {
     $codigo = $_GET['excluir'];
-    $codigoagenda = $_GET['codigo'];
     $consulta2 = $MySQLi->query("DELETE FROM TB_EVENTOS
     WHERE EVE_CODIGO = $codigo");
     header("location: eventostodos.php");

@@ -18,8 +18,6 @@
 
 <body>
 
-
-
 	<center>
 		<h1>GOL!</h1>
 	</center>

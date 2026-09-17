@@ -24,7 +24,8 @@ Atividades realizados em diversas matérias durante o curso de Informática no I
 
 - Foco em Java;
 
-- Classes soltas mais uma série de projetos NetBeans zipados, numerados em ordem cronológica (`01 - Diagnostico...zip` até `12 - Cadastro de Aluno.zip`).
+- Classes soltas mais uma série de projetos NetBeans zipados, numerados em ordem cronológica (`01 - Diagnostico...zip` até `12 - Cadastro de Aluno.zip`);
+- - `Projeto Doce de Neem/`.
 
 ## /Autoria Web (2019)
 
@@ -32,7 +33,7 @@ Atividades realizados em diversas matérias durante o curso de Informática no I
 
 - Foco em HTML, CSS e Javascript sem uso de bibliotecas ou frameworks;
 
-- `Exercicios.html` reúne os exercícios sequenciais numa única página; `Jogo da Forca/` é um projeto à parte, com sua própria pasta e imagens.
+- `Exercicios.html` reúne os exercícios sequenciais numa única página; `Jogo da Forca/` e `Bingo/` são projetos à parte, com suas próprias pastas e imagens.
 
 ## /Banco de Dados (2019)
 
@@ -49,5 +50,3 @@ Atividades realizados em diversas matérias durante o curso de Informática no I
 - Projetos: `ASMA - Alugue Sua Moto Agora` (sistema de aluguel de motos — código em `Código/`, dividido em `includes/`/`pages/`, com `Documentação/` e `Protótipos/` à parte) e `Portal da Transparência Doméstico` (protótipo de acompanhamento de despesas domésticas, com `Usuário Comum/` e `Usuário Master/`, além de `Documentação/` e `Protótipos/`).
 
 ---
-
-Há também um projeto NetBeans à parte dentro de `Programação Estruturada e Orientada a Objetos/`, `Projeto Doce de Neem/` (antes um `Projeto Doceem.zip` solto), ainda não integrado à listagem numerada da disciplina.
